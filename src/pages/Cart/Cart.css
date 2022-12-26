@@ -1,0 +1,321 @@
+#cart {
+    padding: 20px 0;
+}
+
+.cart_top {
+    margin-bottom: 10px;
+    background-color: var(--while);
+    height: 55px;
+    padding: 0 20px;
+}
+.cart_top_list {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 12.5% 12.5% 12.5% 12.5%;
+    align-items: center;
+    gap: 10px;
+}
+.cart_top_list-item {
+    font-size: 1.6rem;
+}
+
+.cart_main {
+    background-color: var(--while);
+    padding: 20px;
+}
+
+.cart_main-item {
+    display: grid;
+    grid-template-columns: 50% 12.5% 12.5% 12.5% 12.5%;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.cart_main_product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart_main_image {
+    width: 80px;
+    height: 80px;
+}
+.cart_main_info {
+    width: 80%;
+}
+
+.cart_main_info-title {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.87);
+    max-height: 42px;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.cart_main_size {
+    margin-top: 5px;
+}
+
+.input_number {
+    width: 50px;
+    height: 32px;
+    font-size: 1.6rem;
+    outline: none;
+}
+
+.cart_main_frice {
+    color: red;
+}
+
+.btn_delete {
+    font-size: 2rem;
+}
+
+.cart_pay {
+    margin: 15px 0;
+    padding: 20px;
+    background-color: var(--while);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart_back_home {
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: #111;
+    position: relative;
+}
+
+.cart_back_home::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    left: 0;
+    bottom: -7px;
+    background: #c84747;
+    height: 2px;
+    transition: 0.3s ease-out;
+}
+
+.cart_back_home:hover::after {
+    width: 100%;
+    color: #c84747;
+}
+
+.cart_pay-body {
+    gap: 20px;
+    text-align: center;
+}
+
+.btn_pay {
+    background: linear-gradient(90deg, rgba(251, 194, 63, 1) 0%, rgba(252, 70, 127, 1) 100%);
+    color: var(--while);
+    cursor: pointer;
+    transition: 0.4s;
+    padding: 5px 10px;
+}
+
+.btn_pay:hover {
+    box-shadow: 7px 5px 56px -14px #c3d900;
+}
+
+.btn_pay:active {
+    transform: scale(0.97);
+    box-shadow: 7px 5px 56px -10px #c3d900;
+}
+.btn_payments {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+/* ======================================================= pay ================================== */
+.overlay_pay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: zoom 0.2s linear forwards;
+    z-index: 5;
+}
+
+.overlay_pay.hide {
+    display: none;
+}
+
+@keyframes zoom {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#pay {
+    box-sizing: border-box;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 54%);
+    border-radius: 13px;
+    width: 500px;
+}
+
+.user_label {
+    position: absolute;
+    left: 15px;
+    color: black;
+    top: 0;
+    pointer-events: none;
+    transform: translateY(1rem);
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+    background-color: #fff;
+}
+.pay_header_info input:focus ~ .user_label,
+.pay_header_info input:valid ~ .user_label {
+    transform: scale(0.8);
+    top: -25%;
+    left: 20px;
+    color: #2196f3;
+}
+#payusename {
+    width: 100%;
+    height: 30px;
+}
+.pay_header {
+    text-align: center;
+}
+.pay_header_sub {
+    text-align: center;
+}
+#pay_phon {
+    width: 100%;
+    height: 30px;
+    background: none;
+}
+.pay_header_info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    margin: 20px 0;
+    position: relative;
+}
+.pay_header_info-name {
+    width: 50%;
+}
+
+.pay_header_info-phone {
+    width: 50%;
+    position: relative;
+}
+.pay_header_info input,
+.pay_address input {
+    font-size: 1.8rem;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    padding: 20px 5px;
+    background: none !important;
+}
+
+.pay_address {
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+
+.pay_address input:focus ~ .user_label,
+.pay_address input:valid ~ .user_label {
+    transform: scale(0.8);
+    top: -25%;
+    left: 20px;
+    color: #2196f3;
+}
+
+#adress {
+    width: 100%;
+    height: 30px;
+}
+.pay_bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.pay_resulf {
+    background-color: #ee4d2d;
+    color: var(--while);
+    font-size: 1.6rem;
+}
+
+.cart_main_unit-frice.mobi {
+    display: none;
+    color: red;
+}
+
+@media only screen and (max-width: 1024px) {
+    .cart_top_list-item:nth-child(4) {
+        display: none;
+    }
+    .cart_top_list-item:nth-child(2) {
+        display: none;
+    }
+    .cart_main_frice {
+        display: none;
+    }
+
+    .cart_main_unit-frice:nth-child(2) {
+        display: none !important;
+    }
+    .cart_main_unit-frice.mobi {
+        display: block;
+    }
+    .cart_main-item {
+        grid-template-columns: 60% 20% 20%;
+    }
+    .cart_top_list {
+        grid-template-columns: 60% 20% 20%;
+    }
+    .cart_pay {
+        flex-direction: column;
+    }
+    .cart_pay-body {
+        text-align: center;
+        order: 1;
+        margin-bottom: 15px;
+    }
+    .cart_back_home {
+        order: 2;
+    }
+}
+
+#pay_money,
+#pay_momo {
+    margin-right: 5px;
+}
+
+.radio {
+    margin-right: 10px;
+}
+
+.payment {
+    display: flex;
+    align-items: center;
+}

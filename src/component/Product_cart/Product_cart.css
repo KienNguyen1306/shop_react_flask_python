@@ -1,0 +1,126 @@
+.product_cart {
+    background-color: var(--while);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 0.2em solid transparent;
+    transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+        rgba(0, 0, 0, 0.2) 0px -3px 0px inset; */
+}
+.product_cart:hover {
+    border: #006fff 0.2em solid;
+}
+.imgae_cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 8px;
+}
+.cart_image {
+    display: inline-block;
+    width: 90%;
+    height: 180px;
+    margin: 0 auto;
+    transition: 0.4s;
+    overflow: hidden;
+}
+.cart_image:hover {
+    transform: scale(1.2);
+}
+.cart_image img {
+    object-fit: contain;
+    border-radius: 8px;
+}
+.cart_body {
+    padding: 0 15px;
+    width: 100%;
+}
+.cart_name {
+    font-size: 1.4rem;
+    min-height: 40px;
+    margin: 10px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.cart_prize {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 16px;
+}
+.cart_prize span {
+    padding-right: 8px;
+}
+.cart_prize_icon {
+    color: yellow;
+    margin-left: 5px;
+}
+.cart_prize span:nth-child(1) {
+    border-right: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+}
+.cart_prize span:nth-child(2) {
+    padding-left: 8px;
+}
+.cart_price {
+    color: red;
+    font-size: 1.8rem;
+    padding: 10px 0;
+}
+.cart_price span {
+    text-decoration: underline;
+}
+.btn_buy-cart {
+    width: 100%;
+    color: var(--blue);
+    margin: 15px 0;
+    transition: 0.2s;
+    text-align: center;
+    border: 1px solid #560bad;
+
+    position: relative;
+    overflow: hidden;
+    transition: color 0.5s;
+    z-index: 1;
+}
+
+.btn_buy-cart:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: #560bad;
+    height: 400px;
+    width: 550px;
+    border-radius: 50%;
+}
+
+.btn_buy-cart:hover {
+    color: #fff;
+}
+
+.Toastify__toast {
+    box-shadow: none !important;
+}
+
+.btn_buy-cart:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+}
+
+.btn_buy-cart:hover:before {
+    top: -70px;
+    left: -70px;
+}
+
+.btn_buy-cart:active:before {
+    background: #3a0ca3;
+    transition: background 0.1s;
+}

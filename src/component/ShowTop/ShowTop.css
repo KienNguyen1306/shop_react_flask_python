@@ -1,0 +1,30 @@
+.scroll_top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 100px;
+    right: 37px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.8rem;
+    border-radius: 150px;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    backdrop-filter: blur(20px);
+    animation: showt 0.2s linear;
+    z-index: 9999999999999999999999999999999;
+}
+
+.scroll_top:hover {
+    backdrop-filter: blur(0px);
+    color: #ffffff;
+}
+
+@keyframes showt {
+    from {
+        bottom: -50px;
+    }
+}

@@ -1,0 +1,21 @@
+#popper {
+    width: 100%;
+    max-height: min((100vh-96px)-60px, 734px);
+    border: 1px solid rgba(0, 0, 0, 0.09);
+    box-shadow: 0 1px 3.125rem 0 rgb(0 0 0 / 20%);
+    border-radius: 1rem;
+    /* overflow: hidden; */
+    background-color: #fff;
+    position: relative;
+}
+
+/* #popper::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 3px;
+    width: 50px;
+    height: 20px;
+    clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+    background-color: #fff;
+} */

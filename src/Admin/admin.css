@@ -1,0 +1,30 @@
+.admin {
+    background-color: #fff;
+    width: 100%;
+    padding: 16px;
+}
+.container_admin {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px 24px;
+}
+
+.admin_body {
+    display: flex;
+    margin-top: 20px;
+}
+.admin_body_left {
+    transition: 0.3s;
+}
+.admin_body_right {
+    background-color: rgb(227 242 253);
+    border-radius: 25px;
+    padding: 20px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.admin_body_right-header {
+    font-size: 2.7rem;
+    color: black;
+}

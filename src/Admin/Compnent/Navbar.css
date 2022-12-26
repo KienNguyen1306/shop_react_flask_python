@@ -1,0 +1,37 @@
+.navbar {
+    height: 100vh;
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+.navbar::-webkit-scrollbar {
+    display: none;
+}
+.navber_list:hover .navbar::-webkit-scrollbar {
+    display: block;
+}
+
+.navber_list {
+}
+.navber_list-heading {
+    padding: 15px 5px;
+    border-top: 1px solid #ccc;
+    display: block;
+}
+.navber_list-heading:nth-child(1) {
+    padding: 15px 5px;
+    border: none;
+    display: block;
+}
+.navber_list-item {
+    padding: 15px 5px 15px 25px;
+    display: flex;
+    align-items: center;
+}
+.navber_list-item:last-child {
+    padding: 15px 5px 15px 25px;
+}
+.navber_icon {
+    font-size: 1.8rem;
+    margin-right: 10px;
+    color: blue;
+}

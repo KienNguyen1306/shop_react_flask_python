@@ -1,0 +1,23 @@
+@media only screen and (max-width: 1024px) {
+    .form_body {
+        flex-direction: column;
+    }
+    .form_body_left {
+        width: 90%;
+    }
+    .form_body_right {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    .form_header {
+        flex-direction: column;
+    }
+    .form_body_left {
+        width: 100%;
+    }
+    .form_body_right {
+        width: 100%;
+    }
+}

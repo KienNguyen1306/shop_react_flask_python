@@ -1,0 +1,115 @@
+.home_admin_top {
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.home_admin_top-bottom {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 50px;
+}
+.home_admin_body_chart {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home_admin_body_chart:nth-child(2) {
+    height: 300px;
+}
+.chart_header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.wedget {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 6px rgba(0, 0, 0, 0);
+}
+.wedget_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+.wedget_left-title {
+    font-size: 2rem;
+}
+.wedget_left-container {
+    font-size: 2.4rem;
+}
+.wedget_left-link {
+    font-size: 1.8rem;
+}
+.wedget_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.wedget_right_top-icon {
+    font-size: 2rem;
+    margin-right: 8px;
+}
+.wedget_icon_pren {
+    padding: 8px;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.wedget_right_top {
+    display: flex;
+    align-items: center;
+}
+
+.wedget_icon {
+    color: black;
+}
+
+.table,
+.table_th,
+.table_td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.home_admin_thongke_priceproduct {
+    margin-top: 20px;
+}
+
+.recharts-legend-wrapper {
+    display: none !important;
+}
+.home_admin_thongke_priceproduct_table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.table_th:nth-child(1) {
+    width: 50px;
+    text-align: center;
+}
+.table_th:nth-child(3) {
+    width: 150px;
+}
+.table_td {
+    text-align: center;
+}
+
+.home_admin_thongke_priceproduct-header {
+    text-align: center;
+    margin-top: 40px;
+}

@@ -1,0 +1,121 @@
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999999999999999999999999999999999;
+}
+.loaderRectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 3px;
+}
+
+.loaderRectangle div {
+    width: 10px;
+    height: 16px;
+    animation: 0.4s ease-in-out infinite;
+    background: #6bfd28;
+    box-shadow: 0 0 20px rgba(18, 31, 53, 0.3);
+}
+
+.loaderRectangle div:nth-child(1) {
+    animation-name: rectangleOneAnim;
+    animation-delay: 0.5s;
+}
+
+@keyframes rectangleOneAnim {
+    0% {
+        height: 25px;
+    }
+
+    40% {
+        height: 40px;
+    }
+
+    100% {
+        height: 25px;
+    }
+}
+
+.loaderRectangle div:nth-child(2) {
+    animation-name: rectangleTwoAnim;
+    animation-delay: 0.6s;
+}
+
+@keyframes rectangleTwoAnim {
+    0% {
+        height: 25px;
+    }
+
+    40% {
+        height: 50px;
+    }
+
+    100% {
+        height: 25px;
+    }
+}
+
+.loaderRectangle div:nth-child(3) {
+    animation-name: rectangleThreeAnim;
+    animation-delay: 0.7s;
+}
+
+@keyframes rectangleThreeAnim {
+    0% {
+        height: 25px;
+    }
+
+    40% {
+        height: 50px;
+    }
+
+    100% {
+        height: 25px;
+    }
+}
+
+.loaderRectangle div:nth-child(4) {
+    animation-name: rectangleFourAnim;
+    animation-delay: 0.8s;
+}
+
+@keyframes rectangleFourAnim {
+    0% {
+        height: 25px;
+    }
+
+    40% {
+        height: 50px;
+    }
+
+    100% {
+        height: 25px;
+    }
+}
+
+.loaderRectangle div:nth-child(5) {
+    animation-name: rectangleFiveAnim;
+    animation-delay: 0.9s;
+}
+
+@keyframes rectangleFiveAnim {
+    0% {
+        height: 25px;
+    }
+
+    40% {
+        height: 40px;
+    }
+
+    100% {
+        height: 25px;
+    }
+}

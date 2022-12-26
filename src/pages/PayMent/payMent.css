@@ -1,0 +1,73 @@
+.payment_page {
+    background-color: var(--bg-color);
+    padding: 20px 0;
+}
+.payment_left {
+    width: 23%;
+    border-right: 1px solid #ccc;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.payment_page_body {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+.icon_payment_page {
+    margin-right: 10px;
+}
+.payment_left_heading {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.payment_left_heading_image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.payment_left_heading_user {
+}
+.payment_left_item {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.payment_right {
+    flex: 1;
+    padding: 0 5px;
+}
+
+.payment_right_body {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.payment_right_heading_item {
+    margin: 5px 0;
+    color: black;
+    font-weight: bold;
+}
+.payment_right_heading_item span {
+    font-weight: initial;
+}
+
+.payment_page_body_login {
+    padding: 40px 0;
+}
+
+@media only screen and (max-width: 978px) {
+    .payment_left {
+        width: 0;
+        border: none;
+    }
+}

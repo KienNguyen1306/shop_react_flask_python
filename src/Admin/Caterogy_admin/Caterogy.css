@@ -1,0 +1,26 @@
+.caterogy_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.caterogy_header_right {
+    display: flex;
+    gap: 10px;
+}
+.header_title {
+    color: rgb(86, 86, 192);
+}
+
+.Caterogy_body_header {
+    display: grid;
+    grid-template-columns: 10% repeat(2, 1fr);
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+.caterogy_admin_item {
+    display: grid;
+    grid-template-columns: 10% repeat(2, 1fr);
+    margin: 15px 0;
+}

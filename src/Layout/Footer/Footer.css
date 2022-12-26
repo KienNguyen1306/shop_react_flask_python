@@ -1,0 +1,42 @@
+.footer {
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.footer_list {
+}
+.footer_item-heading {
+    color: var(--black) !important;
+    font-size: 2rem;
+    font-weight: bolder;
+    line-height: 3;
+}
+
+.footer_list li {
+    opacity: 0.8;
+    line-height: 1.8;
+}
+
+.footer_item_image {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer_item_image img {
+    object-fit: contain;
+    width: 80px;
+}
+
+.footer_icon-pay {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_logo {
+    font-size: 3rem;
+}

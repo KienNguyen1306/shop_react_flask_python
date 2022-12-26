@@ -1,0 +1,126 @@
+.user {
+    width: 100%;
+}
+.btn_add {
+    padding: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: auto;
+    display: block;
+}
+.user_add {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.user_add_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form {
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.form.show {
+    overflow: hidden;
+    height: auto;
+    transition: 0.5s;
+}
+
+@keyframes height {
+    from {
+        height: 0;
+    }
+    to {
+        height: auto;
+    }
+}
+
+.form_control-add {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.form_control-add label {
+    font-size: 1.5rem;
+    padding: 5px 0;
+}
+.form_control-add input {
+    font-size: 1.8rem;
+    padding: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn_add_admin {
+    padding: 5px 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background-color: rgb(152, 152, 219);
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    cursor: pointer;
+}
+.user_body {
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 20px;
+    padding: 10px;
+}
+.user_admin_item {
+    display: grid;
+    grid-template-columns: 10% 30% 30% 30%;
+    margin: 15px 0;
+}
+.user_body_header {
+    display: grid;
+    grid-template-columns: 10% 30% 30% 30%;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+.user_body_header-id,
+.user_body_header-name,
+.user_body_header-email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.user_body_header-name {
+    text-align: center;
+}
+.user_body_header-email {
+    text-align: center;
+}
+
+.btn_action {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    display: inline-block;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.user_body_header-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user_body_header-avatar-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
