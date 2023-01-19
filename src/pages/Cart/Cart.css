@@ -304,6 +304,9 @@
     .cart_back_home {
         order: 2;
     }
+    .cart_main_image {
+        margin-right: 10px;
+    }
 }
 
 #pay_money,

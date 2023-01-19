@@ -82,6 +82,8 @@ function Header({ products }) {
         setuser(false);
     };
 
+    console.log(window.innerWidth);
+
     return (
         <>
             <header id="header" data-aos="fade-down">
@@ -223,12 +225,14 @@ function Header({ products }) {
                         </div>
                     </div>
                     <div className="header_center">
+                        {/* LOGO */}
                         <div className="header_center_logo">
                             <Link to="/" className="header_center_logo_link">
                                 <FcShop className="logo" />
                                 <h2>SHOP</h2>
                             </Link>
                         </div>
+                        {/* Tìm kiếm */}
                         <div className="header_center_search">
                             <>
                                 <Tippy
@@ -291,69 +295,79 @@ function Header({ products }) {
                                 </Tippy>
                             </>
                         </div>
+
+                        {/* giỏ hàng */}
                         <div className="header_center_cart1">
                             <>
-                                <Tippy
-                                    interactive
-                                    placement="bottom-end"
-                                    render={(attrs) => (
-                                        <div className="box_cart" tabIndex="-1" {...attrs}>
-                                            <Popper>
-                                                <div className="box_cart_header">Sản phẩm mới thêm</div>
-                                                {products ? (
-                                                    products.map((p, index) => {
-                                                        return (
-                                                            <Link
-                                                                to={`product/${p.id}`}
-                                                                className="box_cart_body"
-                                                                key={index}
-                                                            >
-                                                                <div className="box_cart_body-image">
-                                                                    <img src={p.image} alt="" />
-                                                                </div>
-                                                                <div className="box_cart_body-left">
-                                                                    <div className="box_cart_body-left_name">
-                                                                        {p.name}
-                                                                    </div>
-                                                                    <div className="box_cart_body-left_price">
-                                                                        <p>
-                                                                            {String(p.priceDown).replace(
-                                                                                /\B(?=(\d{3})+(?!\d))/g,
-                                                                                ',',
-                                                                            )}{' '}
-                                                                            Đ
-                                                                        </p>
-                                                                        <span>Số lượng:{p.qly}</span>
-                                                                    </div>
-                                                                </div>
+                                
+                                    <Tippy
+                                        interactive
+                                        placement="bottom-end"
+                                        render={(attrs) => {
+                                            return (
+                                                window.innerWidth >978 ?
+                                                <div className="box_cart" tabIndex="-1" {...attrs}>
+                                                    <Popper>
+                                                        <div className="box_cart_header">Sản phẩm mới thêm</div>
+                                                        {products ? (
+                                                            products.map((p, index) => {
+                                                                return (
+                                                                    <Link
+                                                                        to={`product/${p.id}`}
+                                                                        className="box_cart_body"
+                                                                        key={index}
+                                                                    >
+                                                                        <div className="box_cart_body-image">
+                                                                            <img src={p.image} alt="" />
+                                                                        </div>
+                                                                        <div className="box_cart_body-left">
+                                                                            <div className="box_cart_body-left_name">
+                                                                                {p.name}
+                                                                            </div>
+                                                                            <div className="box_cart_body-left_price">
+                                                                                <p>
+                                                                                    {String(p.priceDown).replace(
+                                                                                        /\B(?=(\d{3})+(?!\d))/g,
+                                                                                        ',',
+                                                                                    )}{' '}
+                                                                                    Đ
+                                                                                </p>
+                                                                                <span>Số lượng:{p.qly}</span>
+                                                                            </div>
+                                                                        </div>
+                                                                    </Link>
+                                                                );
+                                                            })
+                                                        ) : (
+                                                            <li className="header_top-nav-item box_login">
+                                                                Không có sản phẩm nào
+                                                            </li>
+                                                        )}
+                                                        <div className="box_cart_body_bottom">
+                                                            <Link to="/cart" className="box_cart_body_bottom-link">
+                                                                Xem giỏ hàng
                                                             </Link>
-                                                        );
-                                                    })
-                                                ) : (
-                                                    <li className="header_top-nav-item box_login">
-                                                        Không có sản phẩm nào
-                                                    </li>
-                                                )}
-                                                <div className="box_cart_body_bottom">
-                                                    <Link to="/cart" className="box_cart_body_bottom-link">
-                                                        Xem giỏ hàng
-                                                    </Link>
+                                                        </div>
+                                                    </Popper>
                                                 </div>
-                                            </Popper>
+                                                :''
+                                            );
+                                        }}
+                                    >
+                                        <div className="header_center_cart1">
+                                            <Link to="/cart" className="icon_cart">
+                                                <BsFillCartFill className="icon" />
+                                                <p className="count">{qly}</p>
+                                            </Link>
+                                            <h3>{textLag.headerCenter1}</h3>
                                         </div>
-                                    )}
-                                >
-                                    <div className="header_center_cart1">
-                                        <Link to="/cart" className="icon_cart">
-                                            <BsFillCartFill className="icon" />
-                                            <p className="count">{qly}</p>
-                                        </Link>
-                                        <h3>{textLag.headerCenter1}</h3>
-                                    </div>
-                                </Tippy>
+                                    </Tippy>
+                                
                             </>
                         </div>
                     </div>
+
+                    {/* header caterogy */}
                     <div className="header_bottom">
                         <ul className="header_bootom_caterogy">
                             {Datacaterogy.map((data, index) => {
