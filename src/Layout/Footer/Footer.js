@@ -65,7 +65,6 @@ function Footer() {
                         </ul>
                     </div>
                 </div>
-                <marquee direction="right"> Copyright © :Nguyễn Đức Kiên</marquee>
             </footer>
         </>
     );
